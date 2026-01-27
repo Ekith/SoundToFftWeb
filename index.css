@@ -1,0 +1,24 @@
+.horizontal-layout {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-between; /* Centrer les éléments horizontalement */
+}
+
+
+
+.vertical-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center; /* Ajouté pour centrer les éléments verticalement */
+}
+
+.result-box {
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f0f4f8;
+    border: 2px solid #2c3e50;
+    font-family: sans-serif;
+    margin-top: 20px;
+}

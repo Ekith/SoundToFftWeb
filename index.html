@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Mon App Python Web</title>
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css" />
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+    <link rel="stylesheet" href="index.css" />
+
+    <py-config>
+        packages = ["numpy", "matplotlib", "scipy"]
+    </py-config>
+    
+</head>
+<body>
+
+    <h1>Sound To FFT</h1>
+
+    <div class="horizontal-layout justify">
+        <div class="vertical-layout">
+            <p>Choisissez un fichier audio au format WAV :</p>
+            <input type="file" id="audio-input" accept=".wav" disabled/>
+        </div>
+    
+        <div id="channel-selector" class="horizontal-layout">
+            <button id="previous-channel-button" disabled><</button>
+            <p id="current-channel-display"></p>
+            <button id="next-channel-button" disabled>></button>
+        </div>
+    
+        <div id="plot-buttons" class="vertical-layout">
+            <button id="btn-plot-signal" disabled>Afficher le Signal</button>
+            <button id="btn-plot-fft" disabled>Afficher le Spectre</button>
+            <button id="btn-grid" disabled>Afficher la Grille</button>
+        </div>
+    </div>
+
+
+
+    <div id="affichage" class="result-box">
+        Système en cours de chargement...
+    </div>
+
+    <div id="graph-container" style="width: 100%; height: 500px;">
+    </div>
+
+
+
+
+
+
+    <script type="py" id="mon-script" src="index.py" ></script>
+
+
+</body>
+</html>
